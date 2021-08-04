@@ -39,6 +39,8 @@ def start_game():
     else:
         print("""\nCongrats {}! The number was {}!
 You guessed the correct answer and it only took {} tries!\n""".format(user_name, win_num, num_of_guesses))
+        # I added this try exception to handle the error of trying to calculate
+        # if an integer is greater than a string.
         try:
             if num_of_guesses < highscore:
                 highscore = num_of_guesses
